@@ -1,18 +1,93 @@
 <html>
+
+<meta charset="utf-8">
 <head>
     <title>Responsive Menu using Media Queries</title>
+
+
+    <style>
+        @media screen and ( max-width: 800px ) {
+            .small-menu {
+                display: inline;
+            }
+
+            .large-menu {
+                display: none;
+            }
+        }
+
+        @media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
+            .small-menu {
+                display: none;
+            }
+
+            .large-menu {
+                display: inline;
+                width: 100%;
+            }
+
+            .large-menu ul {
+                list-style-type: none;
+            }
+
+            .large-menu ul li {
+                display: inline;
+            }
+
+            .content: {
+                width: 100%;
+            }
+        }
+
+        @media screen and ( min-width: 1025px ) {
+            .small-menu {
+                display: none;
+            }
+
+            .large-menu {
+                display: inline;
+                float: left;
+                width: 20%;
+            }
+
+            .content {
+                float: right;
+                width: 80%;
+
+            }
+        }
+    </style>
+
 </head>
 <body>
-“<div class="small-menu">
+<div class="small-menu">
     <form>
-        <select name="URL" onchange="window.location.href=this.form.URL.options[this.form.URL.selectedIndex].value">
+        <select name="URL">
             <option value="blog.html">My Blog</option>
             <option value="home.html">My Home Page</option>
             <option value="tutorials.html">My Tutorials</option>
         </select>
-        <form>
-</div>”
+    </form>
+</div>
+<div class="large-menu">
+    <ul>
+        <li>
+            <a href="blog.html">My Blog</a>
+        </li>
+        <li>
+            <a href="home.html">My Home Page</a>
+        </li>
+        <li>
+            <a href="tutorials.html">My Tutorials</a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <p>
+        上周五的时候我对某个项目做了一个更改，将里面的构建脚本由maven换成了gradle。原因之一是因为maven的配置太繁琐，由于其引入了lifecycle的机制，
+        导致其不够灵活，而gradle作为用groovy写的DSL，代码清爽、简单、灵活。原因之二是我们所有的项目构建都换成了gradle，为了保持技术栈单一，此项目
+        做迁移也是大势所趋。</p>
+</div>
 
-Excerpt From: LaGrone, Benjamin. “4407731.8286138663.epub.” iBooks. https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=1AB21D4FDFF1BA5698AB7D2D25C01430
 </body>
 </html>
