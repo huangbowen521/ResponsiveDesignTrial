@@ -4,9 +4,8 @@
 <head>
     <title>Responsive Menu using Media Queries</title>
 
-
     <style>
-        @media screen and ( max-width: 800px ) {
+        @media screen and ( max-width: 400px ) {
             .small-menu {
                 display: inline;
             }
@@ -16,7 +15,7 @@
             }
         }
 
-        @media screen and ( min-width: 801px ) and ( max-width: 1024px ) {
+        @media screen and ( min-width: 401px ) and ( max-width: 800px ) {
             .small-menu {
                 display: none;
             }
@@ -34,12 +33,12 @@
                 display: inline;
             }
 
-            .content: {
+            .content {
                 width: 100%;
             }
         }
 
-        @media screen and ( min-width: 1025px ) {
+        @media screen and ( min-width: 801px ) {
             .small-menu {
                 display: none;
             }
@@ -63,22 +62,22 @@
 <div class="small-menu">
     <form>
         <select name="URL">
-            <option value="blog.html">My Blog</option>
-            <option value="home.html">My Home Page</option>
-            <option value="tutorials.html">My Tutorials</option>
+            <option value="home.html">我的博客首页</option>
+            <option value="blog.html">我的博客列表</option>
+            <option value="whoami.html">我的个人简介</option>
         </select>
     </form>
 </div>
 <div class="large-menu">
     <ul>
         <li>
-            <a href="blog.html">My Blog</a>
+            <a href="home.html">我的博客首页</a>
         </li>
         <li>
-            <a href="home.html">My Home Page</a>
+            <a href="blog.html">我的博客列表</a>
         </li>
         <li>
-            <a href="tutorials.html">My Tutorials</a>
+            <a href="whoami.html">我的个人简介</a>
         </li>
     </ul>
 </div>
